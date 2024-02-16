@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Nuxt 3 소개",
+    "content": "Nuxt 3는 최신 Vue.js 애플리케이션을 위한 강력한 프레임워크입니다."
+  },
+  {
+    "id": 2,
+    "title": "Nuxt 3와 Vue 3",
+    "content": "Nuxt 3와 Vue 3의 새로운 기능에 대해 알아봅니다."
+  },
+  {
+    "id": 3,
+    "date": "2024-02-17",
+    "title": "Composition API 사용하기",
+    "content": "Composition API의 기본적인 사용 방법과 예제를 살펴봅니다."
+  }
+]
