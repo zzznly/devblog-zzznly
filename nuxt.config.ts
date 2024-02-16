@@ -16,4 +16,7 @@ export default defineNuxtConfig({
   typescript: {
     typeCheck: true,
   },
+  // serverMiddleware: [
+  //   { path: '/api', handler: '~/server/middleware/index.js' },
+  // ],
 });
