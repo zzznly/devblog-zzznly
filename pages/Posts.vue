@@ -38,26 +38,17 @@
 </template>
 
 <script setup lang="ts">
-import axios from 'axios';
-import { onMounted, ref } from 'vue';
-
-interface Post {
-  id: number;
-  title: string;
-  content: string;
-}
-const posts = ref<Post[]>();
-
 const fetchPosts = async () => {
+  const { service } = createService();
   try {
-    const res = await axios.get('http://localhost:3000/api/posts');
-    posts.value = res.data;
+    const res = await service.get('/posts');
+    return res.data;
   } catch (error) {
-    console.error('API 요청 중 오류 발생:', error);
+    console.error('Fetch Posts Error: ', error);
+    return [];
   }
 };
-
-onMounted(fetchPosts);
+const { data: posts } = await useAsyncData('posts', () => fetchPosts());
 </script>
 
 <style scoped></style>
