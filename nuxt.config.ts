@@ -11,6 +11,9 @@ export default defineNuxtConfig({
   typescript: {
     typeCheck: true,
   },
+  runtimeConfig: {
+    googleClientId: process.env.GOOGLE_CLIENT_ID,
+  },
   googleSignIn: {
     clientId: process.env.GOOGLE_CLIENT_ID,
   },

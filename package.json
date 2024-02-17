@@ -19,6 +19,7 @@
     "@pinia/nuxt": "^0.5.1",
     "@tanstack/vue-query": "^5.20.5",
     "axios": "^1.6.7",
+    "google-auth-library": "^9.6.3",
     "nuxt-vue3-google-signin": "^0.0.10",
     "pinia": "^2.1.7",
     "vue": "^3.4.19",
