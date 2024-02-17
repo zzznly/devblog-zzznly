@@ -9,7 +9,16 @@ export default {
     './error.vue',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        customGreen: '#12b886',
+      },
+      fontFamily: {
+        robotomono: ['Roboto Mono', 'monospace'],
+        notosansmono: ['Noto Sans Mono', 'monospace'],
+        notosanskr: ['Noto Sans KR', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 };
