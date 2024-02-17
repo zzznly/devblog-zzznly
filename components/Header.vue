@@ -53,6 +53,7 @@
           <button
             type="button"
             class="flex items-center justify-center h-8 px-4 rounded-full outline outline-1 outline-offset-0 outline-black text-sm font-semibold bg-white text-black hover:bg-black hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition duration-150 ease-in"
+            @click="createPost"
           >
             새 글 작성
           </button>
@@ -119,6 +120,7 @@
 <script setup>
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue';
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline';
+import axios from 'axios';
 
 const navigation = [
   { name: 'Posts', href: '/posts' },
@@ -126,4 +128,15 @@ const navigation = [
   { name: 'About', href: '/' },
 ];
 const route = useRoute();
+
+const createPost = async () => {
+  try {
+    await axios.post('http://localhost:3000/api/posts', {
+      title: 'test',
+      content: 'test',
+    });
+  } catch (err) {
+    console.log('Create Post Error: ', err);
+  }
+};
 </script>
